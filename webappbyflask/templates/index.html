@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask App by Jutabhat A.</title>
+</head>
+<body>
+    <h3>Welcome!</h3>
+    <p>{{ text1 }}</p>
+    <p>{{ text2 }}</p> 
+    <img src="{{ image_url }}" alt="Image from Public Link" style="max-width: 500px; height: auto; border: 1px solid #ccc;">
+    <h3>HTTP Request Header</h3>
+    <table>
+        <tr>
+            <td><b>Header Name</b></td>
+            <td><b>Value</b></td>
+        </tr>
+        {% for name, value in headers %}
+        <tr>
+            <td>{{ name }}</td>
+            <td>{{ value }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
